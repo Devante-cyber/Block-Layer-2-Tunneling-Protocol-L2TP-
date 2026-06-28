@@ -36,29 +36,26 @@ Block Layer 2 Tunneling Protocol (L2TP)
 
 •	Click Next.
 
-<img width="975" height="794" alt="image" src="https://github.com/user-attachments/assets/6bf70320-0318-4cdd-8da3-a421a8648a07" />
-
-•	Click Next.
-
 <img width="975" height="794" alt="image" src="https://github.com/user-attachments/assets/dc94d8f8-24fb-41b4-a598-88a47e3c1872" />
 
-•	Select Allow the connection and click Next.
+•	Select Block the connection and click Next.
 
-<img width="975" height="794" alt="image" src="https://github.com/user-attachments/assets/4e66edcb-a410-439e-ac93-cf84c875383e" />
+<img width="984" height="824" alt="Screenshot L2TP BLOCK" src="https://github.com/user-attachments/assets/8184bc10-5a76-4cd1-a9a6-9268e20336f3" />
 
 •	Click Next.
 
 <img width="975" height="794" alt="image" src="https://github.com/user-attachments/assets/8ecd1b30-c4f6-4c2e-a50b-ff3502460baa" />
 
-•	Enter ICMP in the Name field and click Finish.
+•	Enter L2TP in the Name field and click Finish.
 
-<img width="975" height="794" alt="image" src="https://github.com/user-attachments/assets/a08e97f3-2f24-4292-838a-1668f657db46" />
+<img width="984" height="811" alt="Screenshot 2026-06-28 183831" src="https://github.com/user-attachments/assets/5f7150dc-b928-4c2b-8e90-571e219e6c7c" />
 
-•	The ICMP rule is displayed in inbound rules.
+•	The L2TP rule is displayed in inbound rules.
 
-<img width="975" height="309" alt="image" src="https://github.com/user-attachments/assets/b5543683-ef00-4a1b-8bd1-c252d71228b1" />
+<img width="957" height="407" alt="Screenshot 2026-06-28 192444" src="https://github.com/user-attachments/assets/d01ca2bd-abf1-48f3-8ef8-ea8ddf9e3528" />
 
-ICMP inbound rule created and enabled.
+
+•L2TP inbound rule created and enabled.
 
 •	In the right pane select ZYWIN01. In ZYWIN01, click Windows Start and select Windows PowerShell.
 
@@ -68,22 +65,8 @@ ICMP inbound rule created and enabled.
 
 •	ping ZYWIN02
 
-•	ping is successful because the ICMP inbound rule on ZYWIN02 allows ICMP messages.
+•	ping is successful because the L2TP inbound rule on ZYWIN02 blocks ICMP messages.
 
-<img width="975" height="340" alt="image" src="https://github.com/user-attachments/assets/fa9e6fd1-cee7-43a4-9336-787e6f9d27b5" />
-
-•	Select ZYWIN02 in the right pane, and return to Windows Defender Firewall with Advanced Security.
-
-•	Disable the inbound ICMP rule by right-clicking on inbound rule ICMP and selecting Disable Rule.
-
-<img width="975" height="700" alt="image" src="https://github.com/user-attachments/assets/3a4732c3-61c3-483e-bc04-7ccc2bd81ea5" />
-
-•	In a PowerShell window on ZYWIN01, run the ping command with destination device ZYWIN02.
-
-•	ping ZYWIN02
-
-•	ping is unsuccessful because the ICMP inbound rule on ZYWIN02 is disabled, not allowing ICMP messages.
-
-<img width="975" height="239" alt="image" src="https://github.com/user-attachments/assets/8e5ab3cc-5d3f-4c5c-956e-f7d6cd08bc68" />
+<img width="1005" height="706" alt="Screenshot 2026-06-28 184228" src="https://github.com/user-attachments/assets/488318af-3afb-43db-91ec-d9a8aa02f9b0" />
 
 •	ping ZYWIN02 executed.
